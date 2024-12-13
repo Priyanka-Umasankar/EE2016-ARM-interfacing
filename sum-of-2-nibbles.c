@@ -41,7 +41,7 @@ sw_status = read_dip_switch();
 n1 = sw_status;
 n2 = (sw_status >> 6) & 0x000F0000;
 n1 &= 0x000F0000;
-sw_status = n1*n2;
+sw_status = n1+n2;
 
 if(sw_status & DIP_SW_D7>>2){ LED8_ON;} else{ LED8_OFF;}
 if(sw_status & DIP_SW_D6>>2){ LED7_ON;} else{ LED7_OFF;}
