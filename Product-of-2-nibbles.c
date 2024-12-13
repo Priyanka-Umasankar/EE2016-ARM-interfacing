@@ -42,7 +42,7 @@ n2 = (sw_status >> 6) & 0x000F0000;
 n1 &= 0x000F0000;
 n1 = n1>>16;
 n2 = n2>>16;
-sw_status = n1+n2;
+sw_status = n1*n2;
 sw_status = sw_status<<16;
   
 if(sw_status & DIP_SW_D7>>2){ LED8_ON;} else{ LED8_OFF;}
